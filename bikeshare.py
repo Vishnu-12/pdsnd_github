@@ -171,9 +171,9 @@ def main():
         user_stats(df)
         i = 0
         while True:
-            print(df.head(5+i).tail())
-            Next = input('\nWould you like to view the next five? Enter yes or no.\n')
-            i += 5
+            print(df.head(10+i).tail())
+            Next = input('\nWould you like to view the next ten? Enter yes or no.\n')
+            i += 10
             if Next.lower() != 'yes':
                 break
 
