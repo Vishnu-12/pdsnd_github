@@ -2,17 +2,17 @@ import time
 import pandas as pd
 import numpy as np
 
-CITY_DATA = { 'chicago': 'chicago.csv',
-              'new york city': 'new_york_city.csv',
-              'washington': 'washington.csv' }
+CITY_DATA = { 'CHICAGO': 'chicago.csv',
+              'NEW YORK CITY': 'new_york_city.csv',
+              'WASHINGTON': 'washington.csv' }
 
 def get_filters():
     
     print('Hello! Let\'s explore some US bikeshare data!')
-    
+    while True:
         city = input('Which city would you like to analyse the  data for?(chicago, new york city, washington): ')
-        city = city.lower()
-        if city in ('chicago', 'new york city', 'washington'):
+        city = city.upper()
+        if city in ('CHICAGO', 'NEW YORK CITY', 'WASHINGTON'):
             print('thank you')  
             break
         else:
@@ -169,9 +169,9 @@ def main():
         user_stats(df)
         i = 0
         while True:
-            print(df.head(5+i).tail())
-            Next = input('\nWould you like to view the next five? Enter yes or no.\n')
-            i += 5
+            print(df.head(10+i).tail())
+            Next = input('\nWould you like to view the next ten? Enter yes or no.\n')
+            i += 10
             if Next.lower() != 'yes':
                 break
 
